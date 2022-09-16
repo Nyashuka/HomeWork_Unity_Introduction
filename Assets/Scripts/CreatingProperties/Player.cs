@@ -1,30 +1,33 @@
-public class Player
+namespace Scripts.CreatingProperties
 {
-    private int experience;
-
-    public int Experience
+    public class Player
     {
-        get
-        {
-            return experience;
-        }
-        set
-        {
-            experience = value;
-        }
-    }
+        private int experience;
 
-    public int Level
-    {
-        get
+        public int Experience
         {
-            return experience / 1000;
+            get
+            {
+                return experience;
+            }
+            set
+            {
+                experience = value;
+            }
         }
-        set
-        {
-            experience = value * 1000;
-        }
-    }
 
-    public int Health { get; set; }
+        public int Level
+        {
+            get
+            {
+                return experience / 1000;
+            }
+            set
+            {
+                experience = value * 1000;
+            }
+        }
+
+        public int Health { get; set; }
+    }
 }

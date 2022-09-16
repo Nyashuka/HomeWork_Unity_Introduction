@@ -1,17 +1,26 @@
 using UnityEngine;
 
-namespace Scripts.Polymorphism
+namespace Scripts.Inheritance
 {
     public class Fruit
     {
+        public string color;
+
         public Fruit()
         {
+            color = "orange";
             Debug.Log("1st Fruit Constructor Called");
+        }
+
+        public Fruit(string newColor)
+        {
+            color = newColor;
+            Debug.Log("2nd Fruit Constructor Called");
         }
 
         public void Chop()
         {
-            Debug.Log("The fruit has been chopped.");
+            Debug.Log("The " + color + " fruit has been chopped.");
         }
 
         public void SayHello()
